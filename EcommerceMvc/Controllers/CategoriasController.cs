@@ -12,8 +12,9 @@ namespace EcommerceMvc.Controllers
 {
     public class CategoriasController : Controller
     {
-        private readonly EcommerceMvcContext _context;
+        private readonly EcommerceMvcContext _context; //dependencia com a classe EcommerceMvcContext
 
+        //construtor para injeção de dependencia
         public CategoriasController(EcommerceMvcContext context)
         {
             _context = context;

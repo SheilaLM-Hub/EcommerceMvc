@@ -28,7 +28,7 @@ namespace EcommerceMvc
             services.AddControllersWithViews();
 
             services.AddDbContext<EcommerceMvcContext>(options =>
-                    options.UseSqlServer(Configuration.GetConnectionString("EcommerceMvcContext")));
+                    options.UseMySQL(Configuration.GetConnectionString("EcommerceMvcContext"), builder => builder.MigrationsAssembly("EcommerceMvc")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
